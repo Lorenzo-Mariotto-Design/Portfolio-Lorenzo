@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOMA Website Redesign — Lorenzo Mariotto</title>
+  <meta name="description" content="Case study: a UX and UI redesign of the website for SOMA, Frictional Games' sci-fi horror game, focused on navigation, hierarchy and appeal on desktop and mobile.">
+  <meta property="og:title" content="SOMA Website Redesign — Case study by Lorenzo Mariotto">
+  <meta property="og:type" content="article">
+  <meta name="theme-color" content="#0e0d0b">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2316140f'/><text x='50' y='68' font-size='54' text-anchor='middle' fill='%23f4f1ea' font-family='Georgia,serif' font-style='italic'>L</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="index.html" aria-label="Lorenzo Mariotto, home">
+        <span class="brand-mark">L</span>
+        <span class="brand-name">Lorenzo Mariotto</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Menu</span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#visuals">Visuals</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a class="nav-cta" href="index.html#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="cs-hero container">
+      <a class="text-link reveal" href="index.html#work">← All work</a>
+      <p class="eyebrow reveal">Case study · Website · UI/UX</p>
+      <h1 class="cs-title reveal">Redesigning the website for <em>SOMA</em></h1>
+      <p class="cs-lede reveal">SOMA is a sci-fi horror game by Frictional Games, an unsettling story about identity, consciousness and what it means to be human. I redesigned its website to make it clearer to navigate and more compelling, on desktop and mobile.</p>
+
+      <dl class="cs-facts reveal">
+        <div><dt>Role</dt><dd>UX &amp; UI Designer</dd></div>
+        <div><dt>Scope</dt><dd>Website, desktop &amp; mobile</dd></div>
+        <div><dt>Focus</dt><dd>Navigation, hierarchy, appeal</dd></div>
+        <div><dt>Type</dt><dd>Concept project</dd></div>
+      </dl>
+    </section>
+
+    <div class="container">
+      <figure class="cs-cover media reveal">
+        <img src="images/soma-cover.jpg" alt="SOMA website redesign shown on desktop and mobile" loading="lazy">
+        <span class="media-fallback" aria-hidden="true">SOMA</span>
+      </figure>
+    </div>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">01 — Overview</p></div>
+      <div class="cs-text reveal">
+        <h2>Redesign the experience of the website.</h2>
+        <p>SOMA is a sci-fi horror game from Frictional Games, the creators of Amnesia: The Dark Descent. My mission was to rethink how the website presents the game: how information is organised, what a visitor sees first, and how smoothly they are guided from curiosity to purchase.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/s1-intro.jpg" alt="Introduction and mission of the SOMA website redesign" loading="lazy"><span class="media-fallback" aria-hidden="true">01</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">02 — Problem</p></div>
+      <div class="cs-text reveal">
+        <h2>Information was hard to reach, and the mobile experience was missing.</h2>
+        <p>Reviewing the existing site at somagame.com, I found three main pain points:</p>
+        <ul class="cs-points">
+          <li><strong>No clear hierarchy.</strong> The undefined structure makes it difficult to find the information needed to understand the product.</li>
+          <li><strong>Purchase before curiosity.</strong> The home page prioritises buy links over information, assuming visitors already know the game.</li>
+          <li><strong>Not responsive.</strong> Mobile support was practically absent, cutting out everyone who visits from a smartphone.</li>
+        </ul>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/s2-problem.jpg" alt="Problem statement and screenshots of the existing SOMA website" loading="lazy"><span class="media-fallback" aria-hidden="true">02</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">03 — Goals</p></div>
+      <div class="cs-text reveal">
+        <h2>A single guided journey: attract, inform, show, buy.</h2>
+        <p>I reorganised the content into four steps that map to the way a first-time visitor thinks. The home screen attracts, the game section informs, media shows the world, and the purchase section closes the journey.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/s3-goals.jpg" alt="Redesign goals mapping Home, Game, Media and Buy to Attract, Inform, Show and Buy" loading="lazy"><span class="media-fallback" aria-hidden="true">03</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">04 — Style guide</p></div>
+      <div class="cs-text reveal">
+        <h2>Cold, tense and readable.</h2>
+        <p>Rajdhani gives headings a technical, sci-fi voice while Roboto keeps body text easy to read. The palette is built on deep blue-black, with cyan highlights and warm accents used sparingly for calls to action.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/s4-style.jpg" alt="Typography and colour palette for the SOMA redesign" loading="lazy"><span class="media-fallback" aria-hidden="true">04</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">05 — Process</p></div>
+      <div class="cs-text reveal">
+        <h2>Starting from the person, then the flow.</h2>
+        <p>I began with a proto persona: Walter, 27, a student who loves story-driven games and wants as much information as possible before buying. From him I mapped two key tasks, getting an overview and buying the game, and reading news about the game or company. Those became a user flow for the whole site.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/s5-process.jpg" alt="Proto persona and task flows" loading="lazy"><span class="media-fallback" aria-hidden="true">05</span></figure>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/s6-userflow.jpg" alt="User flow diagram" loading="lazy"><span class="media-fallback" aria-hidden="true">06</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">06 — Sketching</p></div>
+      <div class="cs-text reveal">
+        <h2>Sketches and low-fidelity wireframes.</h2>
+        <p>Rough sketches let me test the single-page structure quickly before committing to visual detail.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/s7-sketch.jpg" alt="Low-fidelity wireframing" loading="lazy"><span class="media-fallback" aria-hidden="true">07</span></figure>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/t1-lowfi.jpg" alt="Hand-drawn sketches of the page layout" loading="lazy"><span class="media-fallback" aria-hidden="true">08</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">07 — Prototype</p></div>
+      <div class="cs-text reveal">
+        <h2>High-fidelity design.</h2>
+        <p>The final desktop design is a single scrolling page that runs from the opening hero through the game, media and news to the purchase section.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/t2-proto.jpg" alt="Prototyping on desktop" loading="lazy"><span class="media-fallback" aria-hidden="true">09</span></figure>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/t3-hifi-a.jpg" alt="High-fidelity desktop design, top of the page" loading="lazy"><span class="media-fallback" aria-hidden="true">10</span></figure>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/t3-hifi-b.jpg" alt="High-fidelity desktop design, news and purchase sections" loading="lazy"><span class="media-fallback" aria-hidden="true">11</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">08 — Mobile</p></div>
+      <div class="cs-text reveal">
+        <h2>The same structure, adapted for small screens.</h2>
+        <p>The mobile version follows the desktop structure so the journey feels familiar on any device.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/soma/t4-mobile.jpg" alt="Mobile version of the SOMA website" loading="lazy"><span class="media-fallback" aria-hidden="true">12</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">09 — Final thoughts</p></div>
+      <div class="cs-text reveal">
+        <h2>A continuous, guided experience.</h2>
+        <p>The project came from a need to organise information more clearly and guide users through the site. Moving to a single page gives a continuous journey from the beginning (Home) to the end (Buy). Finding illustrative material was the hardest part, but the general experience of absorbing information and understanding the product is much clearer.</p>
+        <p><strong>Tools:</strong> Figma, Adobe Photoshop, Adobe Illustrator.</p>
+      </div>
+    </section>
+
+    <section class="contact next-case">
+      <div class="container">
+        <p class="eyebrow reveal">Next</p>
+        <h2 class="contact-title reveal">Like what you see?<br><em>Let’s talk.</em></h2>
+        <div class="contact-row reveal">
+          <a class="contact-email" href="mailto:lorenzomariotto90@gmail.com">lorenzomariotto90@gmail.com</a>
+          <button class="copy-btn" type="button" data-copy="lorenzomariotto90@gmail.com">Copy email</button>
+        </div>
+        <ul class="socials reveal">
+          <li><a href="index.html#work">← Back to all work</a></li>
+          <li><a href="https://www.linkedin.com/in/lorenzo-mariotto-1b5647162" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/Wario" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year">2026</span> Lorenzo Mariotto</p>
+    <p>Designed &amp; built in London</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <img alt="">
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
