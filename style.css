@@ -5,7 +5,7 @@
   --ink: #f1ede4;
   --muted: #9a948a;
   --line: #2b2823;
-  --accent: #4d8dff;
+  --accent: #ffe600;
   --dark: #070706;
   --serif: "Instrument Serif", Georgia, serif;
   --sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -255,6 +255,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
   .nav-links .nav-cta { margin-top: 10px; text-align: center; }
   .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 42vw; gap: 10px; }
   .gallery-item.tall { grid-row: span 1; }
+  .memories .gallery-item:last-child { grid-column: span 2; }
   .credentials { grid-template-columns: 1fr; gap: 24px; }
   .section-note, .section-head .text-link { margin-left: 0; }
 }
