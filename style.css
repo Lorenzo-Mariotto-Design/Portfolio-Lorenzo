@@ -187,6 +187,53 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .cs-sub p { color: var(--muted); max-width: 620px; }
 .cs-grid { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .cs-grid .media { aspect-ratio: 16 / 9; }
+/* Night Mode case study: coded visuals */
+.nm-cards { grid-column: 1 / -1; display: grid; gap: 16px; }
+.nm-cards-2 { grid-template-columns: repeat(2, 1fr); }
+.nm-cards-3 { grid-template-columns: repeat(3, 1fr); }
+.nm-card {
+  position: relative; overflow: hidden; padding: clamp(24px, 3vw, 36px);
+  background: radial-gradient(120% 90% at 20% 0%, #1c2230 0%, var(--bg-tint) 60%);
+  border: 1px solid var(--line); border-radius: var(--radius);
+}
+.nm-card h3 { font-weight: 500; font-size: 1.25rem; letter-spacing: -.02em; margin: 22px 0 10px; }
+.nm-card p { color: var(--muted); }
+.nm-card strong { color: var(--ink); font-weight: 500; }
+.nm-card-media { padding: 0 0 clamp(22px, 3vw, 30px); }
+.nm-card-media .media { aspect-ratio: 16 / 9; border-radius: 0; border-bottom: 1px solid var(--line); }
+.nm-card-media h3, .nm-card-media p { padding-inline: clamp(20px, 2.5vw, 28px); }
+.nm-card-media h3 { margin-top: 20px; }
+.nm-icon {
+  display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(170,190,255,.22) 0%, rgba(170,190,255,.06) 55%, transparent 72%);
+  box-shadow: 0 0 40px rgba(150,175,255,.18);
+}
+.nm-icon svg { width: 26px; height: 26px; fill: none; stroke: var(--ink); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+.nm-stat {
+  grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr; gap: clamp(24px, 5vw, 72px); align-items: center;
+  padding: clamp(28px, 4vw, 48px); border: 1px solid var(--line); border-radius: var(--radius);
+  background: radial-gradient(80% 140% at 0% 50%, rgba(255,230,0,.08) 0%, transparent 60%), var(--bg-tint);
+}
+.nm-stat-num { font: 400 clamp(4.5rem, 12vw, 9rem)/.9 var(--serif); color: var(--accent); letter-spacing: -.03em; }
+.nm-stat-num span { font-size: .5em; margin-left: 4px; }
+.nm-stat-body > p:first-child { font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.35; max-width: 26em; }
+.nm-stat-body strong { font-weight: 500; color: var(--ink); }
+.nm-chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 20px 0; }
+.nm-chips li { padding: 6px 14px; border: 1px solid var(--line); border-radius: 99px; font-size: .88rem; }
+.nm-stat-note { color: var(--muted); max-width: 560px; }
+
+.nm-benefits { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; list-style: none; padding: 0; margin: 0; }
+.nm-benefits li {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: clamp(24px, 3vw, 36px) 16px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: radial-gradient(100% 70% at 50% 0%, #1c2230 0%, var(--bg-tint) 70%);
+}
+.nm-benefits .nm-icon { width: 76px; height: 76px; }
+.nm-benefits .nm-icon svg { width: 32px; height: 32px; }
+.nm-benefits h3 { font-weight: 500; font-size: 1.02rem; letter-spacing: -.01em; margin: 18px 0 6px; }
+.nm-benefits p { color: var(--muted); font-size: .9rem; line-height: 1.5; }
+
 .cs-roles { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 28px 0 0; max-width: 620px; }
 .cs-roles li { padding: 6px 12px; border: 1px solid var(--line); border-radius: 99px; font-size: .88rem; }
 
@@ -263,11 +310,18 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 @media (max-width: 900px) {
   .case, .about, .cs-section, .cs-sub { grid-template-columns: 1fr; }
   .cs-sub { gap: 10px; }
+  .nm-cards-3 { grid-template-columns: 1fr; }
+  .nm-benefits { grid-template-columns: repeat(2, 1fr); }
+  .nm-benefits li:last-child { grid-column: 1 / -1; }
   .cs-facts { grid-template-columns: repeat(2, 1fr); }
   .about-media { max-width: 420px; }
   .specialties { grid-template-columns: repeat(2, 1fr); }
   .role { grid-template-columns: 1fr auto; gap: 4px 16px; }
   .role-date { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .nm-cards-2 { grid-template-columns: 1fr; }
+  .nm-stat { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .container { width: calc(100% - 36px); }
