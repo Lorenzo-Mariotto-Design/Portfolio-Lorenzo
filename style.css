@@ -253,6 +253,43 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .nm-benefits h3 { font-weight: 500; font-size: 1.02rem; letter-spacing: -.01em; margin: 18px 0 6px; }
 .nm-benefits p { color: var(--muted); font-size: .9rem; line-height: 1.5; }
 
+/* Game Vision case study */
+.nm-cards-4 { grid-template-columns: repeat(4, 1fr); }
+.gv-pillars { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 4px 0 0; }
+.gv-pillars li { padding: 8px 16px; border: 1px solid var(--line); border-radius: 99px; font-size: .9rem; }
+.gv-pillars li::before { content: "✦"; color: var(--accent); margin-right: 8px; font-size: .8em; }
+
+.gv-anatomy { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(260px, 420px) 1fr; gap: clamp(28px, 5vw, 72px); align-items: start; }
+.gv-shot { position: sticky; top: 96px; margin: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line); background: var(--line); cursor: zoom-in; }
+.gv-shot img { display: block; width: 100%; height: auto; }
+.gv-shot.gallery-item:hover img { transform: none; }
+.gv-markers { position: absolute; inset: 0; list-style: none; margin: 0; padding: 0; pointer-events: none; }
+.gv-markers li {
+  position: absolute; left: 10px; top: var(--y); display: grid; place-items: center;
+  width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #16140f;
+  font: 600 .82rem/1 var(--sans); box-shadow: 0 0 0 4px rgba(14,13,11,.55);
+}
+.gv-list { list-style: none; margin: 0; padding: 0; counter-reset: gv; }
+.gv-list > li { display: grid; grid-template-columns: 36px 1fr; gap: 0 18px; padding: 26px 0; border-top: 1px solid var(--line); }
+.gv-list > li:first-child { border-top: 0; padding-top: 0; }
+.gv-num { grid-row: span 3; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #16140f; font: 600 .88rem/1 var(--sans); }
+.gv-list h3 { font-weight: 500; font-size: 1.2rem; letter-spacing: -.02em; margin-bottom: 6px; }
+.gv-list p { color: var(--muted); }
+.gv-list p strong { color: var(--ink); font-weight: 500; }
+.gv-needs { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 12px 0 0; }
+.gv-needs li { padding: 3px 10px; border-radius: 99px; font-size: .76rem; letter-spacing: .06em; text-transform: uppercase; background: rgba(255,230,0,.1); color: var(--accent); }
+
+.gv-video { margin: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line); background: var(--dark); }
+.gv-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.nm-card-media .gv-video { border: 0; border-radius: 0; border-bottom: 1px solid var(--line); }
+.gv-wide { grid-column: 1 / -1; }
+.gv-split { grid-column: 1 / -1; display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(24px, 4vw, 56px); align-items: center; }
+.gv-split h3 { font-weight: 500; font-size: 1.35rem; letter-spacing: -.02em; margin-bottom: 10px; }
+.gv-split p { color: var(--muted); margin-bottom: 12px; }
+.gv-split .cs-points { margin-top: 12px; }
+.gv-split.reverse > :first-child { order: 2; }
+.gv-scene { display: block; font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+
 .cs-team { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 32px; list-style: none; padding: 0; margin: 28px 0 0; max-width: 620px; }
 .cs-team li { display: flex; flex-direction: column; padding: 14px 0; border-top: 1px solid var(--line); }
 .cs-team strong { font-weight: 500; }
@@ -335,6 +372,10 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
   .nm-cards-3 { grid-template-columns: 1fr; }
   .nm-benefits { grid-template-columns: repeat(2, 1fr); }
   .nm-benefits li:last-child { grid-column: 1 / -1; }
+  .nm-cards-4 { grid-template-columns: repeat(2, 1fr); }
+  .gv-anatomy, .gv-split { grid-template-columns: 1fr; }
+  .gv-shot { position: relative; top: 0; max-width: 420px; }
+  .gv-split.reverse > :first-child { order: 0; }
   .cs-facts { grid-template-columns: repeat(2, 1fr); }
   .about-media { max-width: 420px; }
   .specialties { grid-template-columns: repeat(2, 1fr); }
@@ -342,7 +383,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
   .role-date { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
-  .nm-cards-2 { grid-template-columns: 1fr; }
+  .nm-cards-2, .nm-cards-4 { grid-template-columns: 1fr; }
   .nm-stat { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
