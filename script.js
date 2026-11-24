@@ -62,6 +62,23 @@
     reveals.forEach((el) => el.classList.add("is-in"));
   }
 
+  /* Client logo marquee: duplicate the row so the loop is seamless.
+     Shows the brand name as text until a logo file exists in images/clients/ */
+  const marquee = $(".marquee");
+  const logoGroup = marquee && $(".logo-group", marquee);
+  if (logoGroup) {
+    const copy = logoGroup.cloneNode(true);
+    copy.setAttribute("aria-hidden", "true");
+    $$("img", copy).forEach((img) => { img.alt = ""; });
+    marquee.appendChild(copy);
+  }
+  $$(".logo img").forEach((img) => {
+    const li = img.closest(".logo");
+    const markLoaded = () => li?.classList.add("has-img");
+    if (img.complete && img.naturalWidth > 0) markLoaded();
+    img.addEventListener("load", markLoaded);
+  });
+
   /* Missing images -> styled placeholder */
   $$(".media img").forEach((img) => {
     const markEmpty = () => img.closest(".media")?.classList.add("is-empty");
