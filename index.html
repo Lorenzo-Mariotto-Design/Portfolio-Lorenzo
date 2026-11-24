@@ -20,23 +20,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main">
-      <a class="brand" href="#top" aria-label="Lorenzo Mariotto, back to top">
-        <span class="brand-mark">L</span>
-        <span class="brand-name">Lorenzo Mariotto</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-        <span class="sr-only">Menu</span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#top">Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a class="nav-cta" href="#contact">Get in touch</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- No top navigation on the home page: everything is reachable from the bento grid. -->
 
   <main id="main">
     <!-- WORK REEL hidden. To show it again: remove "hidden" below and set preload="auto". -->
@@ -46,7 +30,7 @@
       </video>
     </div>
 
-    <!-- HERO: bento grid with intro, the two case studies, location and CV -->
+    <!-- HERO: bento grid with intro, the two case studies, About page link and contact -->
     <section class="hero hero-bento container" id="top">
       <div class="bento">
         <div class="b b-intro reveal">
@@ -77,16 +61,24 @@
         </a>
 
         <div class="b-side">
-          <a class="b b-mini reveal" href="#about">
-            <small>Based in</small>
-            <span class="big">London</span>
-            <small>Originally from Italy</small>
+          <a class="b b-photo media reveal" href="about.html">
+            <img src="images/portrait-about.jpg" alt="Black and white portrait of Lorenzo Mariotto by the sea">
+            <span class="b-go" aria-hidden="true">↗</span>
+            <span class="b-cap"><small>Experience · brands · life</small><strong>About me</strong></span>
           </a>
-          <a class="b b-mini b-cv reveal" href="resume.pdf" download>
-            <small>Résumé</small>
-            <span class="big">CV <span aria-hidden="true">↓</span></span>
-            <small>Download PDF</small>
-          </a>
+          <div class="b b-mini b-contact reveal" id="contact">
+            <small>Get in touch</small>
+            <span class="big">Let’s talk.</span>
+            <div class="b-contact-links">
+              <span class="b-email"><a href="mailto:lorenzomariotto90@gmail.com">lorenzomariotto90@gmail.com</a><button class="b-copy" type="button" data-copy="lorenzomariotto90@gmail.com" aria-label="Copy email address">Copy</button></span>
+              <ul class="b-socials">
+                <li><a href="https://www.linkedin.com/in/lorenzo-mariotto-1b5647162" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+                <li><a href="https://dribbble.com/Wario" target="_blank" rel="noopener">Dribbble ↗</a></li>
+                <li><a href="https://www.instagram.com/lorenzomariotto" target="_blank" rel="noopener">Instagram ↗</a></li>
+              </ul>
+              <a class="b-cv-btn" href="resume.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -162,131 +154,6 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section container about" id="about">
-      <div class="about-media media reveal">
-        <img src="images/portrait-blend.gif" alt="Portrait of Lorenzo Mariotto" loading="lazy">
-        <span class="media-fallback" aria-hidden="true">LM</span>
-      </div>
-      <div class="about-body reveal">
-        <p class="eyebrow">About me</p>
-        <h2>Curious since the <em>Super Nintendo.</em></h2>
-        <p>I’ve loved technology for as long as I can remember. One of my first consoles was a SNES, and I’ve been interested in how things work, and how they could work better, ever since.</p>
-        <p>That curiosity led me to design. I trained in fine arts in Italy and started out as a graphic and visual designer. Over time I moved into UX and product design, where solving real problems for real people became the most rewarding part of the job.</p>
-        <p>Today I’m a Product Designer at Sky in London. My visual design background helps me create experiences that people actually want to engage with. I believe good design makes everyday life a little better, and I try to bring passion, fairness and commitment to every team I’m part of.</p>
-        <a class="text-link" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-
-    <!-- CLIENTS -->
-    <section class="clients" aria-labelledby="clients-title">
-      <p class="eyebrow reveal" id="clients-title">Brands I’ve worked with</p>
-      <div class="marquee reveal">
-        <ul class="logo-group">
-          <li class="logo"><img src="images/clients/sky.svg" alt="Sky"><span class="logo-name">Sky</span></li>
-          <li class="logo"><img src="images/clients/comcast.svg" alt="Comcast"><span class="logo-name">Comcast</span></li>
-          <li class="logo"><img src="images/clients/xfinity.svg" alt="Xfinity"><span class="logo-name">Xfinity</span></li>
-          <li class="logo"><img src="images/clients/hubble.svg" alt="Hubble"><span class="logo-name">Hubble</span></li>
-          <li class="logo"><img src="images/clients/ampersand-health.svg" alt="Ampersand Health"><span class="logo-name">Ampersand Health</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="section container" id="experience">
-      <header class="section-head reveal">
-        <p class="eyebrow">Career</p>
-        <h2>Experience</h2>
-        <a class="text-link" href="resume.pdf" download>Full CV (PDF) <span aria-hidden="true">↓</span></a>
-      </header>
-      <ol class="timeline">
-        <li class="role reveal">
-          <span class="role-date">Nov 2021 — Present</span>
-          <div><h3><a href="https://www.sky.com" target="_blank" rel="noopener">Sky</a></h3><p>Product Designer</p></div>
-          <span class="role-place">London, UK</span>
-        </li>
-        <li class="role reveal">
-          <span class="role-date">Jul 2021 — Nov 2021</span>
-          <div><h3><a href="https://www.ampersandhealth.co.uk" target="_blank" rel="noopener">Ampersand Health</a></h3><p>Product Designer</p></div>
-          <span class="role-place">London, UK</span>
-        </li>
-        <li class="role reveal">
-          <span class="role-date">Jul 2018 — Jul 2021</span>
-          <div><h3><a href="https://www.oxotech.co.uk" target="_blank" rel="noopener">Oxo Tech</a></h3><p>Senior UI &amp; UX Designer</p></div>
-          <span class="role-place">London, UK</span>
-        </li>
-        <li class="role reveal">
-          <span class="role-date">Jun 2017 — Jun 2018</span>
-          <div><h3><a href="https://www.vectonemobile.co.uk" target="_blank" rel="noopener">Vectone</a></h3><p>Graphic Web Designer</p></div>
-          <span class="role-place">London, UK</span>
-        </li>
-        <li class="role reveal">
-          <span class="role-date">Dec 2016 — Jun 2017</span>
-          <div><h3><a href="https://www.prowebdesignuk.com" target="_blank" rel="noopener">Pro Web Design</a></h3><p>Graphic Designer</p></div>
-          <span class="role-place">London, UK</span>
-        </li>
-        <li class="role reveal">
-          <span class="role-date">May 2008 — Aug 2008</span>
-          <div><h3><a href="https://www.graphicom.it" target="_blank" rel="noopener">Graphicom</a></h3><p>Graphic Designer Intern</p></div>
-          <span class="role-place">Verona, Italy</span>
-        </li>
-      </ol>
-
-      <div class="credentials">
-        <div class="cred-col reveal">
-          <p class="eyebrow">Education</p>
-          <div class="cred">
-            <h3><a href="https://www.accademiasantagiulia.it" target="_blank" rel="noopener">Accademia di Belle Arti SantaGiulia</a></h3>
-            <p>BFA, Fine Arts: Graphic &amp; Print Production</p>
-            <span>2010 — 2014 · Brescia, Italy</span>
-          </div>
-        </div>
-        <div class="cred-col reveal">
-          <p class="eyebrow">Certifications</p>
-          <div class="cred">
-            <h3>UX Design Certificate</h3>
-            <p>BrainStation</p>
-            <span>May 2023 · ID 830-995-139</span>
-          </div>
-          <div class="cred">
-            <h3>Foundations of User Experience Design</h3>
-            <p>Google, via Coursera</p>
-            <span>Apr 2021 · ID V9JRE82KAVZW</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MEMORIES -->
-    <section class="section container memories" id="memories">
-      <header class="section-head reveal">
-        <p class="eyebrow">Away from the screen</p>
-        <h2>Some good memories</h2>
-      </header>
-      <div class="gallery">
-        <figure class="gallery-item media reveal"><img src="images/memories/kayak.jpg" alt="Kayaking out at sunset" loading="lazy"><span class="media-fallback" aria-hidden="true">01</span></figure>
-        <figure class="gallery-item media reveal"><img src="images/memories/friends-beach.jpg" alt="Holiday with friends on the beach" loading="lazy"><span class="media-fallback" aria-hidden="true">02</span></figure>
-        <figure class="gallery-item media reveal"><img src="images/memories/tree-sun.jpg" alt="Sun shining through a large tree over a field" loading="lazy"><span class="media-fallback" aria-hidden="true">03</span></figure>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <p class="eyebrow reveal">Get in touch</p>
-        <h2 class="contact-title reveal">Have a project or a role in mind?<br><em>Let’s talk.</em></h2>
-        <div class="contact-row reveal">
-          <a class="contact-email" href="mailto:lorenzomariotto90@gmail.com">lorenzomariotto90@gmail.com</a>
-          <button class="copy-btn" type="button" data-copy="lorenzomariotto90@gmail.com">Copy email</button>
-        </div>
-        <ul class="socials reveal">
-          <li><a href="https://www.linkedin.com/in/lorenzo-mariotto-1b5647162" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-          <li><a href="https://dribbble.com/Wario" target="_blank" rel="noopener">Dribbble ↗</a></li>
-          <li><a href="https://www.instagram.com/lorenzomariotto" target="_blank" rel="noopener">Instagram ↗</a></li>
-          <li><a href="resume.pdf" download>CV ↓</a></li>
-        </ul>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer container">

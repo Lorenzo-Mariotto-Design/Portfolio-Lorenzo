@@ -4,7 +4,8 @@ Static portfolio built with plain HTML, CSS and JavaScript. No build step: open 
 
 ## Files
 
-- `index.html` — home: hero, work, visuals, about, experience, contact
+- `index.html` — home: a bento grid (intro, the two case studies, About link, contact card). No top navigation.
+- `about.html` — about me, brands, experience, memories
 - `soma.html` — SOMA website redesign case study
 - `style.css`, `script.js` — shared styles and behaviour
 
