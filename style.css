@@ -234,8 +234,11 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .nm-benefits h3 { font-weight: 500; font-size: 1.02rem; letter-spacing: -.01em; margin: 18px 0 6px; }
 .nm-benefits p { color: var(--muted); font-size: .9rem; line-height: 1.5; }
 
-.cs-roles { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 28px 0 0; max-width: 620px; }
-.cs-roles li { padding: 6px 12px; border: 1px solid var(--line); border-radius: 99px; font-size: .88rem; }
+.cs-team { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 32px; list-style: none; padding: 0; margin: 28px 0 0; max-width: 620px; }
+.cs-team li { display: flex; flex-direction: column; padding: 14px 0; border-top: 1px solid var(--line); }
+.cs-team strong { font-weight: 500; }
+.cs-team span { color: var(--muted); font-size: .88rem; }
+@media (max-width: 480px) { .cs-team { grid-template-columns: 1fr; } }
 
 .work-note { margin-top: clamp(40px, 6vw, 72px); padding-top: 28px; border-top: 1px solid var(--line); color: var(--muted); }
 .work-note .text-link { margin-left: 8px; color: var(--ink); }
