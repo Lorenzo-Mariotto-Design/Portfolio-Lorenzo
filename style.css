@@ -14,6 +14,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 body {
   margin: 0;
@@ -187,6 +188,24 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .cs-sub p { color: var(--muted); max-width: 620px; }
 .cs-grid { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .cs-grid .media { aspect-ratio: 16 / 9; }
+/* Password lock screen */
+.lock { min-height: 100vh; display: grid; place-items: center; align-content: center; gap: 40px; padding: 48px 24px;
+  background: radial-gradient(60% 50% at 50% 30%, rgba(150,175,255,.10) 0%, transparent 70%), var(--bg); }
+.lock-card { width: min(520px, 100%); padding: clamp(28px, 5vw, 44px); border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-tint); }
+.lock-card h1 { font-weight: 500; font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.1; letter-spacing: -.035em; margin-bottom: 14px; }
+.lock-note { color: var(--muted); margin-bottom: 24px; }
+.lock-row { display: flex; gap: 10px; }
+.lock-row input {
+  flex: 1; min-width: 0; min-height: 50px; padding: 0 18px; border-radius: 99px;
+  background: var(--bg); color: var(--ink); border: 1px solid var(--line); font: inherit;
+}
+.lock-row input:focus { outline: none; border-color: var(--ink); }
+.lock-row .button { cursor: pointer; font: 500 1rem var(--sans); }
+.lock-row .button:disabled { opacity: .6; cursor: progress; }
+.lock-error { color: #ff8a7a; margin-top: 14px; font-size: .92rem; }
+.lock-links { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 28px; font-size: .92rem; }
+@media (max-width: 480px) { .lock-row { flex-direction: column; } }
+
 /* Night Mode case study: coded visuals */
 .nm-cards { grid-column: 1 / -1; display: grid; gap: 16px; }
 .nm-cards-2 { grid-template-columns: repeat(2, 1fr); }
