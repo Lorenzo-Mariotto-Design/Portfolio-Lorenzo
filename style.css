@@ -182,6 +182,11 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .cs-shot.is-empty { aspect-ratio: 16 / 9; }
 .cs-video { grid-column: 1 / -1; margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--dark); border: 1px solid var(--line); }
 .cs-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--dark); }
+.cs-sub { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 2.2fr; gap: clamp(24px, 5vw, 80px); margin-top: clamp(24px, 4vw, 48px); }
+.cs-sub h3 { font-weight: 500; font-size: 1.15rem; letter-spacing: -.02em; line-height: 1.3; }
+.cs-sub p { color: var(--muted); max-width: 620px; }
+.cs-grid { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cs-grid .media { aspect-ratio: 16 / 9; }
 .cs-roles { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 28px 0 0; max-width: 620px; }
 .cs-roles li { padding: 6px 12px; border: 1px solid var(--line); border-radius: 99px; font-size: .88rem; }
 
@@ -256,7 +261,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .case, .about, .cs-section { grid-template-columns: 1fr; }
+  .case, .about, .cs-section, .cs-sub { grid-template-columns: 1fr; }
+  .cs-sub { gap: 10px; }
   .cs-facts { grid-template-columns: repeat(2, 1fr); }
   .about-media { max-width: 420px; }
   .specialties { grid-template-columns: repeat(2, 1fr); }
