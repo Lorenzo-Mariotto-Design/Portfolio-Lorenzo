@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Mode on Sky Glass &amp; Stream — Lorenzo Mariotto</title>
+  <meta name="description" content="Case study: Night Mode, an accessibility feature for Sky Glass and Sky Stream that dims the TV interface after sunset. Designed and led by Lorenzo Mariotto as UI/UX designer and project manager.">
+  <meta property="og:title" content="Night Mode on Sky Glass &amp; Stream — Case study by Lorenzo Mariotto">
+  <meta property="og:type" content="article">
+  <meta name="theme-color" content="#0e0d0b">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2316140f'/><text x='50' y='68' font-size='54' text-anchor='middle' fill='%23f4f1ea' font-family='Georgia,serif' font-style='italic'>L</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="index.html" aria-label="Lorenzo Mariotto, home">
+        <span class="brand-mark">L</span>
+        <span class="brand-name">Lorenzo Mariotto</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Menu</span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#visuals">Visuals</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a class="nav-cta" href="index.html#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="cs-hero container">
+      <a class="text-link reveal" href="index.html#work">← All work</a>
+      <p class="eyebrow reveal">Case study · Sky Glass &amp; Stream · Accessibility</p>
+      <h1 class="cs-title reveal"><em>Night Mode</em> on Sky Glass and Stream</h1>
+      <p class="cs-lede reveal">A new accessibility feature that gently dims the TV interface after sunset, so customers can wind down without being dazzled by a bright screen. I took it from idea to working demo as UI/UX designer and project manager, leading a team of seven.</p>
+
+      <dl class="cs-facts reveal">
+        <div><dt>Role</dt><dd>UI/UX Designer &amp; Project Manager</dd></div>
+        <div><dt>Team</dt><dd>Led a team of 7</dd></div>
+        <div><dt>Platform</dt><dd>Sky Glass &amp; Sky Stream</dd></div>
+        <div><dt>When</dt><dd>Lab Week · Sept 2023</dd></div>
+      </dl>
+    </section>
+
+    <div class="container">
+      <figure class="cs-cover media reveal">
+        <img src="images/night-mode/01-cover.jpg" alt="Night Mode title slide: a couple watching a dimmed TV in a dark living room" loading="lazy">
+        <span class="media-fallback" aria-hidden="true">NIGHT MODE</span>
+      </figure>
+    </div>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">01 — Overview</p></div>
+      <div class="cs-text reveal">
+        <h2>Designing for the hours after dark.</h2>
+        <p>Night Mode started as Idea No. 26 at Comcast Labs’ Lab Week, a company-wide innovation week. The brief I set myself was simple: TV is often the last screen people look at before bed, so the interface should adapt to that moment instead of shining at full brightness all night.</p>
+        <p>As well as designing the experience, I ran the project: shaping the scope, planning the week and coordinating developers and testers so we could present a working feature at the end of it.</p>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">02 — Problem</p></div>
+      <div class="cs-text reveal">
+        <h2>Bright screens late at night disrupt sleep.</h2>
+        <ul class="cs-points">
+          <li><strong>Too much light before bed.</strong> Excessive exposure to bright screens late in the evening is linked to disrupted sleep.</li>
+          <li><strong>One display for every schedule.</strong> There was no way to personalise the UI display to fit different customers’ routines.</li>
+        </ul>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/night-mode/02-problem.jpg" alt="The current problem: excessive screen exposure before bed and no way to personalise the display" loading="lazy"><span class="media-fallback" aria-hidden="true">02</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">03 — Market</p></div>
+      <div class="cs-text reveal">
+        <h2>Customers already expect it on their other devices.</h2>
+        <p><strong>81.9%</strong> of device users use some form of dark or night mode. Apple, Samsung and Google all offer modes that change how the screen looks. That’s a clear signal to build a feature that fits Sky customers’ night-time routine.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/night-mode/03-market.jpg" alt="Market competition: 81.9% of device users use a form of dark or night mode" loading="lazy"><span class="media-fallback" aria-hidden="true">03</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">04 — Solution</p></div>
+      <div class="cs-text reveal">
+        <h2>A display that follows the sun.</h2>
+        <p>Night Mode follows local sunset and sunrise times, automatically lowering screen brightness so watching TV late doesn’t get in the way of a good night’s sleep. Manual controls let customers fit it to their own schedule.</p>
+        <ul class="cs-points">
+          <li><strong>Improved sleep quality.</strong> Less bright light after dark.</li>
+          <li><strong>Customisation and control.</strong> Automatic by default, adjustable by hand.</li>
+          <li><strong>Reduced eye strain.</strong> More comfortable viewing in a dark room.</li>
+          <li><strong>Energy conservation.</strong> Lower brightness uses less power.</li>
+          <li><strong>Enhanced accessibility.</strong> A more comfortable experience for light-sensitive viewers.</li>
+        </ul>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/night-mode/04-solution.jpg" alt="Our solution: Night Mode and its five benefits" loading="lazy"><span class="media-fallback" aria-hidden="true">04</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">05 — Demo</p></div>
+      <div class="cs-text reveal">
+        <h2>See it working.</h2>
+        <p>A walkthrough of Night Mode running on the Sky interface.</p>
+      </div>
+      <figure class="cs-video reveal">
+        <video controls preload="metadata" playsinline poster="images/night-mode/01-cover.jpg">
+          <source src="videos/night-mode-demo.mp4" type="video/mp4">
+          Your browser can’t play this video. <a href="videos/night-mode-demo.mp4">Download the demo</a>.
+        </video>
+      </figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">06 — Leading the team</p></div>
+      <div class="cs-text reveal">
+        <h2>From idea to working feature, with seven people.</h2>
+        <p>I led a cross-functional team of seven alongside my design work. I set the plan and priorities, kept everyone aligned on what we were building and why, and made sure design and engineering moved together through the week.</p>
+        <ul class="cs-roles">
+          <li>Senior Developer</li>
+          <li>Software Engineer</li>
+          <li>Developer</li>
+          <li>C++ Developer</li>
+          <li>Manual Tester</li>
+          <li>Senior Automation Tester</li>
+          <li>Automation Tester</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">07 — What’s next</p></div>
+      <div class="cs-text reveal">
+        <h2>The future of Night Mode.</h2>
+        <ul class="cs-points">
+          <li><strong>Dimmer hardware lights.</strong> Lower the brightness of the LEDs on Sky Glass buttons and the remote control.</li>
+          <li><strong>One tap away.</strong> Add Night Mode to the Quick Access menu.</li>
+          <li><strong>Ambient sensing.</strong> Use Sky Live to sense the light in the room and adjust screen brightness automatically.</li>
+        </ul>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/night-mode/05-future.jpg" alt="The future of Night Mode: dimmer LEDs, Quick Access menu and ambient light sensing" loading="lazy"><span class="media-fallback" aria-hidden="true">05</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">08 — Final thoughts</p></div>
+      <div class="cs-text reveal">
+        <h2>Small change, real comfort.</h2>
+        <p>Night Mode is less about technology than about how people feel at the end of the day. By dimming the display after sunset it makes TV more comfortable and more inclusive, and it quietly tells customers that we care about their well-being.</p>
+        <p>It’s one of the projects I’m proudest of, both for the feature itself and for how the team came together to build it.</p>
+        <p><strong>Tools:</strong> Figma.</p>
+      </div>
+    </section>
+
+    <section class="contact next-case">
+      <div class="container">
+        <p class="eyebrow reveal">Next</p>
+        <h2 class="contact-title reveal">Like what you see?<br><em>Let’s talk.</em></h2>
+        <div class="contact-row reveal">
+          <a class="contact-email" href="mailto:lorenzomariotto90@gmail.com">lorenzomariotto90@gmail.com</a>
+          <button class="copy-btn" type="button" data-copy="lorenzomariotto90@gmail.com">Copy email</button>
+        </div>
+        <ul class="socials reveal">
+          <li><a href="index.html#work">← Back to all work</a></li>
+          <li><a href="soma.html">SOMA case study →</a></li>
+          <li><a href="https://www.linkedin.com/in/lorenzo-mariotto-1b5647162" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/Wario" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year">2026</span> Lorenzo Mariotto</p>
+    <p>Designed &amp; built in London</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <img alt="">
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
