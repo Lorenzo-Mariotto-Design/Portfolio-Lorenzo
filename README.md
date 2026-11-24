@@ -8,20 +8,20 @@ Static portfolio built with plain HTML, CSS and JavaScript. No build step: open 
 - `soma.html` — SOMA website redesign case study
 - `style.css`, `script.js` — shared styles and behaviour
 
-## Password-protected Night Mode case study
+## Password-protected case studies
 
-`night-mode.html` is encrypted and only opens with the password. The readable
-version lives in `private/night-mode.src.html`, which is git-ignored and never
-published. To change the page:
+`night-mode.html` and `game-vision.html` are encrypted and only open with the
+password. The readable versions live in `private/` (git-ignored, never
+published). To change a page:
 
-1. Edit `private/night-mode.src.html`.
+1. Edit its source in `private/` (`night-mode.src.html` or `game-vision.src.html`).
 2. Re-encrypt it (PowerShell):
 
    ```
-   $env:PAGE_PASSWORD = "your-password"; node tools/encrypt-page.mjs private/night-mode.src.html night-mode.html
+   $env:PAGE_PASSWORD = "your-password"; node tools/encrypt-page.mjs private/game-vision.src.html game-vision.html
    ```
 
-3. Commit and push `night-mode.html`.
+3. Commit and push the encrypted `.html` file.
 
 To change the password, run step 2 with a new one. Note: images and the demo
 video are not encrypted, and the repo is public.

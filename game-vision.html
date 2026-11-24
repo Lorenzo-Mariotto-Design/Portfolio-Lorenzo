@@ -13,402 +13,76 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main">
-      <a class="brand" href="index.html" aria-label="Lorenzo Mariotto, home">
-        <span class="brand-mark">L</span>
-        <span class="brand-name">Lorenzo Mariotto</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-        <span class="sr-only">Menu</span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html#work">Work</a></li>
-        <li><a href="index.html#visuals">Visuals</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#experience">Experience</a></li>
-        <li><a class="nav-cta" href="index.html#contact">Get in touch</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="cs-hero container">
-      <a class="text-link reveal" href="index.html#work">← All work</a>
-      <p class="eyebrow reveal">Case study · Xfinity · TV &amp; gaming</p>
-      <h1 class="cs-title reveal"><em>Game Vision</em> on TV for Xfinity</h1>
-      <p class="cs-lede reveal">A games destination built into the TV: one place to discover, play, watch and connect, all from the sofa. I designed the whole experience from a short product brief, from the first rail of the destination to a detailed page for every game.</p>
-
-      <dl class="cs-facts reveal">
-        <div><dt>Role</dt><dd>Lead UI/UX Designer</dd></div>
-        <div><dt>Starting point</dt><dd>Product requirements brief</dd></div>
-        <div><dt>Platform</dt><dd>Xfinity TV (EntOS)</dd></div>
-        <div><dt>Scope</dt><dd>Destination, Show Center, devices, settings</dd></div>
-      </dl>
-    </section>
-
-    <div class="container">
-      <figure class="cs-cover gv-video reveal">
-        <video autoplay muted loop playsinline preload="metadata" poster="images/game-vision/hero-trailer-poster.jpg" aria-label="The games destination on Xfinity with a trailer playing in the hero area">
-          <source src="videos/game-vision/hero-trailer.mp4" type="video/mp4">
-        </video>
-      </figure>
-    </div>
-
-    <!-- 01 OVERVIEW -->
-    <section class="cs-section container">
-      <div class="cs-label reveal"><p class="eyebrow">01 — Overview</p></div>
-      <div class="cs-text reveal">
-        <h2>Bringing games to the biggest screen in the home.</h2>
-        <p>The industry is gearing up for the next streaming war, and cloud gaming services show that people are ready to play without a console. The opportunity was to make the TV platform the first place people go for games, alongside the shows and films they already watch.</p>
-        <p>I worked from a short product requirements brief and owned the design end to end: the information architecture, every screen and state, and the motion concepts that make the destination feel alive. The designs were built for EntOS, the entertainment platform shared by Xfinity and Sky, so some screens appear in both brands.</p>
+  <main class="lock" id="lock">
+    <a class="brand" href="index.html" aria-label="Lorenzo Mariotto, home">
+      <span class="brand-mark">L</span>
+      <span class="brand-name">Lorenzo Mariotto</span>
+    </a>
+    <form class="lock-card" id="lock-form" autocomplete="off">
+      <p class="eyebrow">Protected case study</p>
+      <h1>Game Vision on TV for Xfinity</h1>
+      <p class="lock-note">This project is password protected. Enter the password to view it, or get in touch to request access.</p>
+      <label class="sr-only" for="lock-pw">Password</label>
+      <div class="lock-row">
+        <input id="lock-pw" type="password" placeholder="Password" required autofocus>
+        <button class="button" type="submit">Unlock <span aria-hidden="true">→</span></button>
       </div>
-    </section>
-
-    <!-- 02 BRIEF -->
-    <section class="cs-section container">
-      <div class="cs-label reveal"><p class="eyebrow">02 — The brief</p></div>
-      <div class="cs-text reveal">
-        <h2>Four things gamers need to do on TV.</h2>
-        <p>The brief framed the platform’s success around four user needs. Every rail and feature in the destination maps back to at least one of them.</p>
-      </div>
-
-      <div class="nm-cards nm-cards-4">
-        <article class="nm-card reveal">
-          <span class="nm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="12.5" rx="2"/><path d="M8 21h8M10.5 9l4 2.25-4 2.25Z"/></svg></span>
-          <h3>Watch</h3>
-          <p>Watch live gaming content from streaming sources like Twitch.</p>
-        </article>
-        <article class="nm-card reveal">
-          <span class="nm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.2c2.6.2 4.5 2.2 4.5 4.8"/></svg></span>
-          <h3>Connect</h3>
-          <p>Engage with gaming creators, friends and the wider community.</p>
-        </article>
-        <article class="nm-card reveal">
-          <span class="nm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7.5h10a4.5 4.5 0 0 1 4.3 5.8l-1.2 3.9a2.3 2.3 0 0 1-3.9.9L14 15.5h-4l-2.2 2.6a2.3 2.3 0 0 1-3.9-.9l-1.2-3.9A4.5 4.5 0 0 1 7 7.5Z"/><path d="M8 10.5v3M6.5 12h3"/><circle cx="16" cy="11" r=".6"/><circle cx="17.5" cy="13" r=".6"/></svg></span>
-          <h3>Play</h3>
-          <p>Play cloud games solo or with others, without buying a console.</p>
-        </article>
-        <article class="nm-card reveal">
-          <span class="nm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2.5" y="14" width="4.5" height="6.5" rx="1.5"/><rect x="17" y="14" width="4.5" height="6.5" rx="1.5"/></svg></span>
-          <h3>Control</h3>
-          <p>Easily manage connected devices like controllers and headsets.</p>
-        </article>
-      </div>
-
-      <ul class="gv-pillars reveal" aria-label="Product vision">
-        <li>All in one place</li><li>Social</li><li>Safe &amp; trustworthy</li><li>Personal to me</li>
-      </ul>
-    </section>
-
-    <!-- 03 WHO IT'S FOR -->
-    <section class="cs-section container">
-      <div class="cs-label reveal"><p class="eyebrow">03 — Who it’s for</p></div>
-      <div class="cs-text reveal">
-        <h2>From first-time players to family game night.</h2>
-        <p>I used four everyday scenarios to keep the design grounded in real moments in the home.</p>
-      </div>
-
-      <div class="nm-cards nm-cards-2">
-        <article class="nm-card reveal">
-          <span class="gv-scene">Scene 1 · A new gamer</span>
-          <h3>Sage tries a game she’s heard about</h3>
-          <p>She spots it promoted on the TV and can play straight away, <strong>without investing in an expensive console</strong>.</p>
-        </article>
-        <article class="nm-card reveal">
-          <span class="gv-scene">Scene 2 · The community</span>
-          <h3>Theo finds a streamer he recognises</h3>
-          <p>A row of live streamers lets him <strong>watch someone play a game he loves</strong> without picking up another device.</p>
-        </article>
-        <article class="nm-card reveal">
-          <span class="gv-scene">Scene 3 · Back into battle</span>
-          <h3>Dylan has ten minutes between work and class</h3>
-          <p>Her games are right there. She picks one and <strong>jumps back in exactly where she left off</strong>.</p>
-        </article>
-        <article class="nm-card reveal">
-          <span class="gv-scene">Scene 4 · Family game night</span>
-          <h3>Mum asks for games the family can play together</h3>
-          <p>The TV suggests camera games that <strong>respect the parental controls</strong>, so the family can even challenge cousins across town.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- 04 ENTRY + THREE HUBS -->
-    <section class="cs-section container">
-      <div class="cs-label reveal"><p class="eyebrow">04 — Getting in</p></div>
-      <div class="cs-text reveal">
-        <h2>One tile away, with three ways to say hello.</h2>
-        <p>Games sits in the home screen’s category rail next to Sports, Kids and News, so it feels like a natural part of the TV rather than a separate app. Selecting the tile opens the games destination.</p>
-      </div>
-      <figure class="cs-shot gallery-item media reveal"><img src="images/game-vision/category-rail.jpg" alt="Home screen with the Games tile focused in the category rail" loading="lazy"><span class="media-fallback" aria-hidden="true">Rail</span></figure>
-
-      <div class="cs-sub reveal">
-        <h3>Three destination layouts</h3>
-        <p>The top of the destination can take three forms, so editorial and partner teams can match the layout to the moment, from an everyday line-up to a big launch.</p>
-      </div>
-      <div class="nm-cards nm-cards-3">
-        <article class="nm-card nm-card-media reveal">
-          <figure class="gallery-item media"><img src="images/game-vision/hero-trailer-poster.jpg" alt="Default destination with a full-width hero and rails below" loading="lazy"><span class="media-fallback" aria-hidden="true">Default</span></figure>
-          <h3>Default</h3>
-          <p>A full-width hero with key art and game details, and rails starting straight underneath.</p>
-        </article>
-        <article class="nm-card nm-card-media reveal">
-          <figure class="gallery-item media"><img src="images/game-vision/parallax-poster.jpg" alt="Billboard destination with a large editorial card" loading="lazy"><span class="media-fallback" aria-hidden="true">Billboard</span></figure>
-          <h3>Billboard</h3>
-          <p>A carousel of large editorial cards, with a peek of the next one to invite browsing.</p>
-        </article>
-        <article class="nm-card nm-card-media reveal">
-          <figure class="gallery-item media"><img src="images/game-vision/spotlight.jpg" alt="Premium spotlight destination with a full-screen featured game" loading="lazy"><span class="media-fallback" aria-hidden="true">Spotlight</span></figure>
-          <h3>Premium spotlight</h3>
-          <p>A full-screen takeover for a featured or partner title, made for big releases.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- 05 DESTINATION ANATOMY -->
-    <section class="cs-section container">
-      <div class="cs-label reveal"><p class="eyebrow">05 — The destination</p></div>
-      <div class="cs-text reveal">
-        <h2>From the first rail to the last.</h2>
-        <p>I structured the destination as a journey down the page: what’s happening now at the top, your own games next, then wider discovery, community and categories. Each part has a clear job and serves one or more of the four user needs.</p>
-      </div>
-
-      <div class="gv-anatomy">
-        <figure class="gv-shot gallery-item reveal">
-          <img src="images/game-vision/destination-full.jpg" alt="The full games destination, from the hero to the genre tiles" loading="lazy">
-          <ol class="gv-markers" aria-hidden="true">
-            <li style="--y:1.5%">1</li><li style="--y:19.5%">2</li><li style="--y:32%">3</li><li style="--y:73.5%">4</li><li style="--y:94.5%">5</li>
-          </ol>
-        </figure>
-        <ol class="gv-list">
-          <li class="reveal">
-            <span class="gv-num">1</span>
-            <h3>What’s new &amp; trending</h3>
-            <p>The hero shows a personal pick with the reason why (<strong>“Because you played Horizon Zero Dawn”</strong>). Below it, <strong>Trending now</strong> shows what’s popular across the platform, tagged by service.</p>
-            <ul class="gv-needs"><li>Play</li><li>Watch</li></ul>
-          </li>
-          <li class="reveal">
-            <span class="gv-num">2</span>
-            <h3>Your games</h3>
-            <p><strong>Continue playing</strong> brings back games you’ve started, with progress shown on each tile. <strong>Games from your playlist</strong> collects what you’ve saved for later.</p>
-            <ul class="gv-needs"><li>Play</li></ul>
-          </li>
-          <li class="reveal">
-            <span class="gv-num">3</span>
-            <h3>Discover</h3>
-            <p>A <strong>spotlight</strong> for a featured game, then curated rails: <strong>Best of the year</strong>, <strong>New games</strong> with larger feature tiles, and <strong>Coming soon</strong>. This is the hook to see everything available.</p>
-            <ul class="gv-needs"><li>Discover</li><li>Play</li></ul>
-          </li>
-          <li class="reveal">
-            <span class="gv-num">4</span>
-            <h3>Connect</h3>
-            <p><strong>Apps &amp; inputs</strong> gives quick access to services like Xbox Game Pass, PlayStation Now, Stadia and GeForce Now. <strong>Live now on Twitch</strong> surfaces popular streamers with viewer counts, and a camera games rail shows what you can play with the TV camera.</p>
-            <ul class="gv-needs"><li>Connect</li><li>Watch</li><li>Play</li></ul>
-          </li>
-          <li class="reveal">
-            <span class="gv-num">5</span>
-            <h3>Discover more</h3>
-            <p>Genre tiles (<strong>Action, Role-playing, Puzzle, Kid-friendly</strong>) close the page and lead into deeper browsing, so the journey never hits a dead end.</p>
-            <ul class="gv-needs"><li>Discover</li></ul>
-          </li>
-        </ol>
-      </div>
-
-      <div class="gv-split">
-        <figure class="cs-shot gallery-item media reveal" style="margin:0"><img src="images/game-vision/jump-back-in.jpg" alt="Jump back in rail with Batman: Arkham Knight focused and a progress bar" loading="lazy"><span class="media-fallback" aria-hidden="true">Resume</span></figure>
-        <div class="reveal">
-          <h3>Resume points: jump back in</h3>
-          <p>People shouldn’t have to remember which service each game lives on. <strong>Jump back in</strong> puts every game in progress in one row, with a progress bar, and opens it right where you left off.</p>
-          <p>The hero updates as you move along the row, showing the game’s details and how many friends have played it.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 06 SHOW CENTER -->
-    <section class="cs-section container">
-      <div class="cs-label reveal"><p class="eyebrow">06 — Show Center</p></div>
-      <div class="cs-text reveal">
-        <h2>Everything about a game, on one screen.</h2>
-        <p>Show Center is the game detail page. Using God of War as the example, I designed it to answer every question a player might have before pressing Play, without sending them to their phone.</p>
-      </div>
-      <figure class="cs-shot gallery-item media reveal"><img src="images/game-vision/show-center-hero.jpg" alt="Show Center hero for God of War with Play, trailer, friends, add and more buttons" loading="lazy"><span class="media-fallback" aria-hidden="true">Show Center</span></figure>
-
-      <div class="gv-anatomy">
-        <figure class="gv-shot gallery-item reveal">
-          <img src="images/game-vision/show-center-full.jpg" alt="The full Show Center page for God of War" loading="lazy">
-          <ol class="gv-markers" aria-hidden="true">
-            <li style="--y:1.5%">1</li><li style="--y:19%">2</li><li style="--y:25%">3</li><li style="--y:41.5%">4</li><li style="--y:50%">5</li><li style="--y:62.5%">6</li><li style="--y:76.5%">7</li>
-          </ol>
-        </figure>
-        <ol class="gv-list">
-          <li class="reveal">
-            <span class="gv-num">1</span>
-            <h3>Hero</h3>
-            <p>Key art, the service it’s on, a short synopsis, star rating, genre and age rating. One clear <strong>Play</strong> button, with quick actions for the <strong>trailer</strong>, <strong>playing with friends</strong>, <strong>adding to your playlist</strong> and more.</p>
-          </li>
-          <li class="reveal">
-            <span class="gv-num">2</span>
-            <h3>Trailers &amp; screenshots</h3>
-            <p>See the game in action before committing to it.</p>
-          </li>
-          <li class="reveal">
-            <span class="gv-num">3</span>
-            <h3>About this game</h3>
-            <p>The story in short sections, plus the facts in one panel: <strong>release date, rating, developer, publisher, genre, formats (4K, HD), accessibility</strong> and <strong>which services it’s available on</strong>. A languages panel shows audio and subtitle support.</p>
-          </li>
-          <li class="reveal">
-            <span class="gv-num">4</span>
-            <h3>Explore the series</h3>
-            <p>Every game in the franchise, for fans who want to go back to the start.</p>
-          </li>
-          <li class="reveal">
-            <span class="gv-num">5</span>
-            <h3>Live channels</h3>
-            <p>Twitch streamers playing this game right now, with views and timing, connecting the page to the community.</p>
-          </li>
-          <li class="reveal">
-            <span class="gv-num">6</span>
-            <h3>Critic reviews</h3>
-            <p>Scores and quotes from outlets like Polygon and IGN, to build confidence before playing.</p>
-          </li>
-          <li class="reveal">
-            <span class="gv-num">7</span>
-            <h3>Discover more games like this</h3>
-            <p>Similar games to keep exploring, ending the page with somewhere to go next.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- 07 MOTION -->
-    <section class="cs-section container">
-      <div class="cs-label reveal"><p class="eyebrow">07 — Motion</p></div>
-      <div class="cs-text reveal">
-        <h2>Making the destination feel alive.</h2>
-        <p>Games are made to be seen in motion, so I explored three ways to bring video into the browsing experience while keeping it calm and in the user’s control.</p>
-      </div>
-
-      <div class="nm-cards nm-cards-3">
-        <article class="nm-card nm-card-media reveal">
-          <figure class="gv-video"><video muted loop playsinline preload="none" poster="images/game-vision/hero-trailer-poster.jpg" aria-label="Hero trailer playing behind the destination hero"><source src="videos/game-vision/hero-trailer.mp4" type="video/mp4"></video></figure>
-          <h3>Hero trailer</h3>
-          <p>After a moment on a game, its trailer starts playing in the hero area behind the details.</p>
-        </article>
-        <article class="nm-card nm-card-media reveal">
-          <figure class="gv-video"><video muted loop playsinline preload="none" poster="images/game-vision/trailer-tile-poster.jpg" aria-label="Trailer playing inside a focused tile"><source src="videos/game-vision/trailer-tile.mp4" type="video/mp4"></video></figure>
-          <h3>Trailers in tiles</h3>
-          <p>A focused tile grows and plays the trailer right in the rail, so people can preview without leaving the page.</p>
-        </article>
-        <article class="nm-card nm-card-media reveal">
-          <figure class="gv-video"><video muted loop playsinline preload="none" poster="images/game-vision/parallax-poster.jpg" aria-label="Cinemagraph and parallax effect in a billboard card"><source src="videos/game-vision/parallax.mp4" type="video/mp4"></video></figure>
-          <h3>Cinemagraph + parallax</h3>
-          <p>Layered key art with subtle movement and depth, made for the billboard and spotlight layouts.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- 08 CONTROL & CONNECT -->
-    <section class="cs-section container">
-      <div class="cs-label reveal"><p class="eyebrow">08 — Control &amp; connect</p></div>
-      <div class="cs-text reveal">
-        <h2>Controllers, friends and peace of mind.</h2>
-        <p>Playing on TV only works if connecting a controller is easy and families feel safe. I designed the supporting features that make that possible.</p>
-      </div>
-
-      <div class="gv-split">
-        <figure class="gv-video reveal"><video muted loop playsinline preload="none" poster="images/game-vision/friends-panel-poster.jpg" aria-label="Friends and devices side panel opening over the destination"><source src="videos/game-vision/friends-panel.mp4" type="video/mp4"></video></figure>
-        <div class="reveal">
-          <h3>Friends &amp; devices panel</h3>
-          <p>A side panel that opens over any screen. It shows <strong>connected Bluetooth devices</strong> with their battery levels, lets you <strong>add a new controller or pair an existing one</strong>, and lists <strong>friends</strong> with their online status.</p>
-        </div>
-      </div>
-
-      <div class="gv-split reverse">
-        <figure class="cs-shot gallery-item media reveal" style="margin:0"><img src="images/game-vision/quick-settings.jpg" alt="Quick settings over gameplay showing controllers, audio output, viewing mode and night mode" loading="lazy"><span class="media-fallback" aria-hidden="true">Quick settings</span></figure>
-        <div class="reveal">
-          <h3>Hardware in quick settings</h3>
-          <p>Controllers and audio output sit in the quick settings overlay, so players can switch headsets or check a controller mid-game without leaving it.</p>
-        </div>
-      </div>
-
-      <figure class="cs-shot gallery-item media reveal"><img src="images/game-vision/settings.jpg" alt="Settings screens for age restriction, subscriptions and managing devices" loading="lazy"><span class="media-fallback" aria-hidden="true">Settings</span></figure>
-      <div class="cs-sub reveal">
-        <h3>Settings, privacy &amp; subscriptions</h3>
-        <p>Parents can set <strong>age restrictions</strong> and <strong>privacy controls</strong>, and everyone can see their <strong>active subscriptions</strong>, like Xbox Game Pass, with renewal dates, alongside a full <strong>manage devices</strong> screen.</p>
-      </div>
-
-      <div class="cs-sub reveal">
-        <h3>Live cam gaming integration</h3>
-        <p>Using the TV’s camera, players can <strong>stream their video feed to friends</strong> while they play, or play camera games together from different homes.</p>
-      </div>
-      <div class="cs-grid">
-        <figure class="gallery-item media reveal"><img src="images/game-vision/live-cam.jpg" alt="Racing game with the player's camera feed shown picture-in-picture" loading="lazy"><span class="media-fallback" aria-hidden="true">Live cam</span></figure>
-        <figure class="gallery-item media reveal"><img src="images/game-vision/live-friends.jpg" alt="Fighting game with four friends' camera feeds alongside" loading="lazy"><span class="media-fallback" aria-hidden="true">Friends</span></figure>
-      </div>
-    </section>
-
-    <!-- 09 OUTCOME -->
-    <section class="cs-section container">
-      <div class="cs-label reveal"><p class="eyebrow">09 — Outcome</p></div>
-      <div class="cs-text reveal">
-        <h2>A vision the business could rally around.</h2>
-        <p>The work became the design vision for games on the platform. Comcast and Sky teams collaborated on it as the main deck for senior leadership. It gave stakeholders something concrete to react to: a full destination, a detailed game page and the supporting features, rather than a list of requirements.</p>
-        <p>The biggest challenge was balancing a lot of content with the calm, lean-back feel of TV. Grouping rails by purpose, keeping one clear action per screen and using motion with restraint kept the experience easy to navigate with a remote.</p>
-        <p><strong>Tools:</strong> Figma.</p>
-      </div>
-    </section>
-
-    <section class="contact next-case">
-      <div class="container">
-        <p class="eyebrow reveal">Next</p>
-        <h2 class="contact-title reveal">Like what you see?<br><em>Let’s talk.</em></h2>
-        <div class="contact-row reveal">
-          <a class="contact-email" href="mailto:lorenzomariotto90@gmail.com">lorenzomariotto90@gmail.com</a>
-          <button class="copy-btn" type="button" data-copy="lorenzomariotto90@gmail.com">Copy email</button>
-        </div>
-        <ul class="socials reveal">
-          <li><a href="index.html#work">← Back to all work</a></li>
-          <li><a href="night-mode.html">Night Mode case study →</a></li>
-          <li><a href="https://www.linkedin.com/in/lorenzo-mariotto-1b5647162" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-          <li><a href="https://dribbble.com/Wario" target="_blank" rel="noopener">Dribbble ↗</a></li>
-        </ul>
-      </div>
-    </section>
+      <p class="lock-error" id="lock-error" role="alert" hidden>That password isn’t right. Please try again.</p>
+      <p class="lock-links"><a class="text-link" href="index.html">← Back to home</a> <a class="text-link" href="index.html#contact">Request access</a></p>
+    </form>
+    <noscript><p class="lock-note">Please enable JavaScript to unlock this page.</p></noscript>
   </main>
-
-  <footer class="site-footer container">
-    <p>© <span id="year">2026</span> Lorenzo Mariotto</p>
-    <p>Designed &amp; built in London</p>
-    <a href="#top">Back to top ↑</a>
-  </footer>
-
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
-    <button class="lightbox-close" type="button" aria-label="Close">×</button>
-    <img alt="">
-  </div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
   <script>
-    /* Play videos only while they're on screen; respect reduced motion. */
-    (() => {
-      const videos = [...document.querySelectorAll(".gv-video video")];
-      if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        videos.forEach((v) => { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
-        return;
+  (() => {
+    const DATA = { salt: "SHM1+8N7K5xwonrdjcEajw==", iv: "FKnEWLZGbU/aoANS", ct: "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", it: 310000 };
+    const KEY = "unlock:game-vision.html";
+    const form = document.getElementById("lock-form");
+    const input = document.getElementById("lock-pw");
+    const error = document.getElementById("lock-error");
+    const btn = form.querySelector("button");
+    const bytes = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+
+    async function unlock(pw) {
+      const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]);
+      const key = await crypto.subtle.deriveKey(
+        { name: "PBKDF2", salt: bytes(DATA.salt), iterations: DATA.it, hash: "SHA-256" },
+        base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]
+      );
+      const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: bytes(DATA.iv) }, key, bytes(DATA.ct));
+      document.body.innerHTML = new TextDecoder().decode(plain);
+      // Scripts added via innerHTML don't run, so re-create them.
+      document.body.querySelectorAll("script").forEach((old) => {
+        const fresh = document.createElement("script");
+        [...old.attributes].forEach((a) => fresh.setAttribute(a.name, a.value));
+        fresh.textContent = old.textContent;
+        old.replaceWith(fresh);
+      });
+      const s = document.createElement("script");
+      s.src = "script.js";
+      document.body.appendChild(s);
+      if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      btn.disabled = true;
+      error.hidden = true;
+      try {
+        await unlock(input.value);
+        try { sessionStorage.setItem(KEY, input.value); } catch {}
+      } catch {
+        error.hidden = false;
+        input.select();
+        btn.disabled = false;
       }
-      if (!("IntersectionObserver" in window)) { videos.forEach((v) => v.play().catch(() => {})); return; }
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(({ target, isIntersecting }) => {
-          if (isIntersecting) target.play().catch(() => {}); else target.pause();
-        });
-      }, { threshold: 0.35 });
-      videos.forEach((v) => io.observe(v));
-    })();
+    });
+
+    let saved = null;
+    try { saved = sessionStorage.getItem(KEY); } catch {}
+    if (saved) unlock(saved).catch(() => { try { sessionStorage.removeItem(KEY); } catch {} });
+  })();
   </script>
 </body>
 </html>

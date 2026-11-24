@@ -36,6 +36,11 @@ const b64 = (u8) => Buffer.from(u8).toString("base64");
 // script.js is loaded only after unlocking, so it wires up the real page.
 const lockedHead = head.replace(/\s*<script src="script\.js"[^>]*><\/script>/, "");
 
+// Lock screen title comes from the page's <h1>; each page remembers its own unlock.
+const h1 = body.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? "Case study";
+const title = h1.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+const storageKey = "unlock:" + out.replace(/\\/g, "/").split("/").pop();
+
 const page = `<!DOCTYPE html>
 <html lang="en">
 <head>${lockedHead}</head>
@@ -47,7 +52,7 @@ const page = `<!DOCTYPE html>
     </a>
     <form class="lock-card" id="lock-form" autocomplete="off">
       <p class="eyebrow">Protected case study</p>
-      <h1>Night Mode on Sky Glass and Stream</h1>
+      <h1>${title}</h1>
       <p class="lock-note">This project is password protected. Enter the password to view it, or get in touch to request access.</p>
       <label class="sr-only" for="lock-pw">Password</label>
       <div class="lock-row">
@@ -62,7 +67,7 @@ const page = `<!DOCTYPE html>
   <script>
   (() => {
     const DATA = { salt: "${b64(salt)}", iv: "${b64(iv)}", ct: "${b64(cipher)}", it: ${ITERATIONS} };
-    const KEY = "nm-unlock";
+    const KEY = "${storageKey}";
     const form = document.getElementById("lock-form");
     const input = document.getElementById("lock-pw");
     const error = document.getElementById("lock-error");
@@ -77,6 +82,13 @@ const page = `<!DOCTYPE html>
       );
       const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: bytes(DATA.iv) }, key, bytes(DATA.ct));
       document.body.innerHTML = new TextDecoder().decode(plain);
+      // Scripts added via innerHTML don't run, so re-create them.
+      document.body.querySelectorAll("script").forEach((old) => {
+        const fresh = document.createElement("script");
+        [...old.attributes].forEach((a) => fresh.setAttribute(a.name, a.value));
+        fresh.textContent = old.textContent;
+        old.replaceWith(fresh);
+      });
       const s = document.createElement("script");
       s.src = "script.js";
       document.body.appendChild(s);
