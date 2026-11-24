@@ -316,7 +316,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .about-body .text-link { margin-top: 10px; }
 
 /* ---------- Experience ---------- */
-#experience { border-top: 1px solid var(--line); }
+#memories { border-top: 1px solid var(--line); }
 .timeline { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .role {
   display: grid; grid-template-columns: 200px 1fr auto; gap: 24px; align-items: baseline;
