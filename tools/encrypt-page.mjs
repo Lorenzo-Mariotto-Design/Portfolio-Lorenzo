@@ -39,7 +39,8 @@ const lockedHead = head.replace(/\s*<script src="script\.js"[^>]*><\/script>/, "
 // Lock screen title comes from the page's <h1>; each page remembers its own unlock.
 const h1 = body.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? "Case study";
 const title = h1.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
-const storageKey = "unlock:" + out.replace(/\\/g, "/").split("/").pop();
+// One unlock opens every case study that shares the password, so readers can move between them.
+const storageKey = "unlock:case-studies";
 
 const page = `<!DOCTYPE html>
 <html lang="en">
