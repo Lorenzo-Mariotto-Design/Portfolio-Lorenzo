@@ -80,18 +80,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .text-link:hover { color: var(--accent); background-size: 0 1px; background-position: 100% 100%; }
 .eyebrow { font-size: .78rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
 
-/* ---------- Hero work reel (top-right corner) ---------- */
-.hero-reel {
-  position: absolute; top: 0; right: 0; z-index: 0; pointer-events: none;
-  width: min(68vw, 1240px); aspect-ratio: 16 / 9; opacity: .6;
-  -webkit-mask-image: radial-gradient(ellipse 115% 125% at 100% 0%, #000 38%, rgba(0,0,0,.75) 55%, rgba(0,0,0,.3) 72%, transparent 88%);
-          mask-image: radial-gradient(ellipse 115% 125% at 100% 0%, #000 38%, rgba(0,0,0,.75) 55%, rgba(0,0,0,.3) 72%, transparent 88%);
-}
-.hero-reel { overflow: hidden; }
-/* Zoom from the bottom-left so the TV's own clock and logo bar fall outside the frame */
-.hero-reel video { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.16); transform-origin: 0 100%; }
 .hero { position: relative; z-index: 1; }
-@media (max-width: 720px) { .hero-reel { width: 130vw; opacity: .45; } }
 
 /* ---------- Hero ---------- */
 .hero { padding: clamp(56px, 10vw, 120px) 0 clamp(48px, 7vw, 80px); }
@@ -213,7 +202,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 
 /* ---------- Media + fallback ---------- */
 .media { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--line); margin: 0; }
-.media img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.media img, .media video { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.media video { display: block; }
 .media-fallback { display: none; }
 .media.is-empty { background: linear-gradient(135deg, #25221d, #181612); }
 .media.is-empty .media-fallback {
@@ -529,6 +519,4 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
   .js .reveal { opacity: 1; transform: none; }
   .logo-group[aria-hidden="true"] { display: none; }
   .logo-group { flex-wrap: wrap; row-gap: 24px; }
-  .hero-reel video { display: none; }
-  .hero-reel { background: url("images/work-reel-poster.jpg") center / cover; }
 }
