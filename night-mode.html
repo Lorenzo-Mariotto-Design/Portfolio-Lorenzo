@@ -13,76 +13,274 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="lock" id="lock">
-    <a class="brand" href="index.html" aria-label="Lorenzo Mariotto, home">
-      <span class="brand-mark">L</span>
-      <span class="brand-name">Lorenzo Mariotto</span>
-    </a>
-    <form class="lock-card" id="lock-form" autocomplete="off">
-      <p class="eyebrow">Protected case study</p>
-      <h1>Night Mode feature on Sky Glass and Sky Stream</h1>
-      <p class="lock-note">This project is password protected. Enter the password to view it, or get in touch to request access.</p>
-      <label class="sr-only" for="lock-pw">Password</label>
-      <div class="lock-row">
-        <input id="lock-pw" type="password" placeholder="Password" required autofocus>
-        <button class="button" type="submit">Unlock <span aria-hidden="true">→</span></button>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="index.html" aria-label="Lorenzo Mariotto, home">
+        <span class="brand-mark">L</span>
+        <span class="brand-name">Lorenzo Mariotto</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Menu</span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#experience">Experience</a></li>
+        <li><a class="nav-cta" href="index.html#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="cs-hero container">
+      <a class="text-link reveal" href="index.html">← All work</a>
+      <p class="eyebrow reveal">Case study · Sky Glass &amp; Stream · Accessibility</p>
+      <h1 class="cs-title reveal"><em>Night Mode</em> feature on Sky Glass and Sky Stream</h1>
+      <p class="cs-lede reveal">A new accessibility feature that gently dims the TV interface after sunset, so customers can wind down without being dazzled by a bright screen. I took it from idea to working demo as UI/UX designer and project manager, leading a team of seven.</p>
+
+      <dl class="cs-facts reveal">
+        <div><dt>Role</dt><dd>UI/UX Designer &amp; Project Manager</dd></div>
+        <div><dt>Team</dt><dd>Led a team of 7</dd></div>
+        <div><dt>Platform</dt><dd>Sky Glass &amp; Sky Stream</dd></div>
+        <div><dt>Focus</dt><dd>Accessibility &amp; well-being</dd></div>
+      </dl>
+    </section>
+
+    <div class="container">
+      <figure class="cs-cover media reveal">
+        <img src="images/night-mode/01-cover.jpg" alt="Night Mode title slide: a couple watching a dimmed TV in a dark living room" loading="lazy">
+        <span class="media-fallback" aria-hidden="true">NIGHT MODE</span>
+      </figure>
+    </div>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">01 — Overview</p></div>
+      <div class="cs-text reveal">
+        <h2>Designing for the hours after dark.</h2>
+        <p>Night Mode started as my own idea during a company innovation week. The brief I set myself was simple: TV is often the last screen people look at before bed, so the interface should adapt to that moment instead of shining at full brightness all night.</p>
+        <p>As well as designing the experience, I ran the project: shaping the scope, planning the week and coordinating developers and testers so we could present a working feature at the end of it.</p>
       </div>
-      <p class="lock-error" id="lock-error" role="alert" hidden>That password isn’t right. Please try again.</p>
-      <p class="lock-links"><a class="text-link" href="index.html">← Back to home</a> <a class="text-link" href="index.html#contact">Request access</a></p>
-    </form>
-    <noscript><p class="lock-note">Please enable JavaScript to unlock this page.</p></noscript>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">02 — Problem &amp; opportunity</p></div>
+      <div class="cs-text reveal">
+        <h2>Bright screens late at night disrupt sleep, and customers already expect a fix.</h2>
+      </div>
+
+      <div class="nm-cards nm-cards-2">
+        <article class="nm-card reveal">
+          <span class="nm-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/><path d="M15 3h3l-3 3h3"/></svg>
+          </span>
+          <h3>Too much light before bed</h3>
+          <p>Long exposure to bright screens late in the evening is linked to <strong>disrupted sleep</strong>, and TV is often the last screen people watch.</p>
+        </article>
+        <article class="nm-card reveal">
+          <span class="nm-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+          </span>
+          <h3>One display for every schedule</h3>
+          <p>There was no way to personalise the display to fit <strong>different customers’ routines</strong>, whether they wind down at 9pm or after midnight.</p>
+        </article>
+      </div>
+
+      <div class="nm-stat reveal">
+        <p class="nm-stat-num">81.9<span>%</span></p>
+        <div class="nm-stat-body">
+          <p>of device users already use some form of <strong>dark or night mode</strong>.</p>
+          <ul class="nm-chips" aria-label="Companies with similar features">
+            <li>Apple</li><li>Samsung</li><li>Google</li>
+          </ul>
+          <p class="nm-stat-note">The biggest device makers all offer modes that change how the screen looks. That’s a clear signal to build one that fits Sky customers’ night-time routine.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">03 — Solution</p></div>
+      <div class="cs-text reveal">
+        <h2>A display that follows the sun.</h2>
+        <p>Night Mode follows local sunset and sunrise times, automatically lowering screen brightness so watching TV late doesn’t get in the way of a good night’s sleep. Manual controls let customers fit it to their own schedule.</p>
+      </div>
+
+      <ul class="nm-benefits">
+        <li class="reveal">
+          <span class="nm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18h5l-5 3h5"/><path d="M11 11h4l-4 3h4"/><path d="M16 4h5l-5 4h5"/></svg></span>
+          <h3>Better sleep</h3>
+          <p>Less bright light after dark.</p>
+        </li>
+        <li class="reveal">
+          <span class="nm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3v18M12 3v18M18 3v18"/><circle cx="6" cy="8" r="2"/><circle cx="12" cy="15" r="2"/><circle cx="18" cy="9" r="2"/></svg></span>
+          <h3>Customisation &amp; control</h3>
+          <p>Automatic by default, adjustable by hand.</p>
+        </li>
+        <li class="reveal">
+          <span class="nm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <h3>Less eye strain</h3>
+          <p>More comfortable viewing in a dark room.</p>
+        </li>
+        <li class="reveal">
+          <span class="nm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h6"/><rect x="14" y="12" width="6" height="9" rx="1"/><path d="M16 10.5h2"/></svg></span>
+          <h3>Energy saving</h3>
+          <p>Lower brightness uses less power.</p>
+        </li>
+        <li class="reveal">
+          <span class="nm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="7" r="1.4"/><path d="M7.5 10h9M12 10v4l-2.5 4.5M12 14l2.5 4.5"/></svg></span>
+          <h3>Accessibility</h3>
+          <p>Kinder to light-sensitive viewers.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">04 — Design &amp; flows</p></div>
+      <div class="cs-text reveal">
+        <h2>Every state mapped out for the developers.</h2>
+        <p>To get from idea to a working build in a week, the engineers needed to know exactly how every screen behaved. I designed the full set of flows on the Sky Glass interface: Night Mode off, on and scheduled, plus the optional extensions. Each step shows the remote control action that leads to it.</p>
+        <p>I labelled every flow as <strong>MVP</strong> or <strong>Optional</strong>. That kept the team focused on what we had to ship by the end of the week and left a clear backlog for later.</p>
+      </div>
+
+      <div class="cs-sub reveal">
+        <h3>Night Mode on: dim and blue light filter</h3>
+        <p>Night Mode sits under Accessibility in Settings. Dim and Filter Blue Light each open a slider over whatever is playing, so customers see the effect on real content as they adjust it. Dimming stops before 0%, so the screen can never go completely black.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/night-mode/flow-on.jpg" alt="Night Mode ON user flow: settings, dim levels, blue light filter levels, and optional remote and LED brightness" loading="lazy"><span class="media-fallback" aria-hidden="true">Flow</span></figure>
+      <div class="cs-grid">
+        <figure class="gallery-item media reveal"><img src="images/night-mode/screen-dim.jpg" alt="Dim slider shown over a film, with the picture darkened" loading="lazy"><span class="media-fallback" aria-hidden="true">Dim</span></figure>
+        <figure class="gallery-item media reveal"><img src="images/night-mode/screen-bluelight.jpg" alt="Filter blue light slider shown over a film, with a warmer picture" loading="lazy"><span class="media-fallback" aria-hidden="true">Blue light</span></figure>
+      </div>
+
+      <div class="cs-sub reveal">
+        <h3>Scheduled: following the customer’s routine</h3>
+        <p>Customers can switch Night Mode at local sunrise and sunset, or choose their own start and end times. Resetting the schedule and preferences is always one step away.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/night-mode/screen-schedule.jpg" alt="Night Mode settings screen with custom start time set to 8.00pm" loading="lazy"><span class="media-fallback" aria-hidden="true">Schedule</span></figure>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/night-mode/flow-scheduled.jpg" alt="Night Mode SCHEDULED user flow: sunrise and sunset toggle, custom start and end times, and reset" loading="lazy"><span class="media-fallback" aria-hidden="true">Flow</span></figure>
+
+      <div class="cs-sub reveal">
+        <h3>Quick Access menu (optional)</h3>
+        <p>For faster access, I explored putting Night Mode in the Quick Access menu. A press of the remote lets customers switch between On, Scheduled and Adaptive Brightness without leaving what they’re watching.</p>
+      </div>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/night-mode/screen-qam.jpg" alt="Quick Access menu over a film, with Night Mode set to Scheduled" loading="lazy"><span class="media-fallback" aria-hidden="true">QAM</span></figure>
+      <figure class="cs-shot gallery-item media reveal"><img src="images/night-mode/flow-qam.jpg" alt="Night Mode in the Quick Access menu user flow" loading="lazy"><span class="media-fallback" aria-hidden="true">Flow</span></figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">05 — Demo</p></div>
+      <div class="cs-text reveal">
+        <h2>See it working.</h2>
+        <p>A walkthrough of Night Mode running on the Sky interface.</p>
+      </div>
+      <figure class="cs-video reveal">
+        <video controls preload="metadata" playsinline poster="images/night-mode/demo-poster.jpg">
+          <source src="videos/night-mode-demo.mp4" type="video/mp4">
+          Your browser can’t play this video. <a href="videos/night-mode-demo.mp4">Download the demo</a>.
+        </video>
+      </figure>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">06 — Leading the team</p></div>
+      <div class="cs-text reveal">
+        <h2>From idea to working feature, with seven people.</h2>
+        <p>I led a cross-functional team of seven alongside my design work. I set the plan and priorities, kept everyone aligned on what we were building and why, and made sure design and engineering moved together through the week.</p>
+        <ul class="cs-team">
+          <li><strong>Andres Monk</strong><span>Senior Developer</span></li>
+          <li><strong>Amba Patel</strong><span>Software Engineer</span></li>
+          <li><strong>Lee Knaggs</strong><span>Developer</span></li>
+          <li><strong>Albion Babiqi</strong><span>C++ Developer</span></li>
+          <li><strong>Kalpesh Modha</strong><span>Manual Tester</span></li>
+          <li><strong>Michele Gec</strong><span>Senior Automation Tester</span></li>
+          <li><strong>Abhishek Tewari</strong><span>Automation Tester</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">07 — What’s next</p></div>
+      <div class="cs-text reveal">
+        <h2>The future of Night Mode.</h2>
+      </div>
+
+      <div class="nm-cards nm-cards-3">
+        <article class="nm-card nm-card-media reveal">
+          <figure class="gallery-item media"><img src="images/night-mode/next-leds.jpg" alt="Sky Glass LED brightness slider with the TV's side buttons glowing" loading="lazy"><span class="media-fallback" aria-hidden="true">LEDs</span></figure>
+          <h3>Dimmer hardware lights</h3>
+          <p>Lower the brightness of the LEDs on the Sky Glass buttons and the remote control.</p>
+        </article>
+        <article class="nm-card nm-card-media reveal">
+          <figure class="gallery-item media"><img src="images/night-mode/screen-qam.jpg" alt="Night Mode in the Quick Access menu over a film" loading="lazy"><span class="media-fallback" aria-hidden="true">QAM</span></figure>
+          <h3>One press away</h3>
+          <p>Add Night Mode to the Quick Access menu, so it can be changed without leaving the show.</p>
+        </article>
+        <article class="nm-card nm-card-media reveal">
+          <figure class="gallery-item media"><img src="images/night-mode/next-skylive.jpg" alt="Sky Live camera on top of Sky Glass while a couple watches a film" loading="lazy"><span class="media-fallback" aria-hidden="true">Sky Live</span></figure>
+          <h3>Ambient sensing</h3>
+          <p>Use the Sky Live camera to sense the light in the room and adjust brightness automatically.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cs-section container">
+      <div class="cs-label reveal"><p class="eyebrow">08 — Final thoughts</p></div>
+      <div class="cs-text reveal">
+        <h2>Small change, real comfort.</h2>
+        <p>Night Mode is less about technology than about how people feel at the end of the day. By dimming the display after sunset it makes TV more comfortable and more inclusive, and it quietly tells customers that we care about their well-being.</p>
+        <p>It’s one of the projects I’m proudest of, both for the feature itself and for how the team came together to build it.</p>
+        <p><strong>Tools:</strong> Figma.</p>
+      </div>
+    </section>
+
+    <!-- EXPLORE MORE: invites the reader to the next case study -->
+    <section class="section container more-cases" aria-labelledby="more-title">
+      <header class="section-head reveal">
+        <p class="eyebrow">Keep reading</p>
+        <h2 id="more-title">Explore more case studies</h2>
+      </header>
+      <a class="more-card reveal" href="game-vision.html">
+        <span class="more-img media"><img src="images/game-vision/thumb.jpg" alt="The Xfinity games billboard with God of War, on a TV shown at an angle" loading="lazy"></span>
+        <span class="more-cap">
+          <small>02 — Xfinity · TV &amp; gaming</small>
+          <strong>Game destination on Xfinity TV</strong>
+          <span class="more-desc">A games destination for Xfinity TV: one place to discover, play, watch and connect from the sofa, designed end to end from a product brief.</span>
+          <span class="more-cta">Read the case study <span aria-hidden="true">→</span></span>
+        </span>
+      </a>
+    </section>
+
+    <section class="contact next-case">
+      <div class="container">
+        <p class="eyebrow reveal">Next</p>
+        <h2 class="contact-title reveal">Like what you see?<br><em>Let’s talk.</em></h2>
+        <div class="contact-row reveal">
+          <a class="contact-email" href="mailto:lorenzomariotto90@gmail.com">lorenzomariotto90@gmail.com</a>
+          <button class="copy-btn" type="button" data-copy="lorenzomariotto90@gmail.com">Copy email</button>
+        </div>
+        <ul class="socials reveal">
+          <li><a href="index.html">← Back to all work</a></li>
+          <li><a href="https://www.linkedin.com/in/lorenzo-mariotto-1b5647162" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://dribbble.com/Wario" target="_blank" rel="noopener">Dribbble ↗</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
-  <script>
-  (() => {
-    const DATA = { salt: "kDySQaRB/NcHSeWFF35lMw==", iv: "NX2jdMydKFZcGyCL", ct: "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", it: 310000 };
-    const KEY = "unlock:case-studies";
-    const form = document.getElementById("lock-form");
-    const input = document.getElementById("lock-pw");
-    const error = document.getElementById("lock-error");
-    const btn = form.querySelector("button");
-    const bytes = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
 
-    async function unlock(pw) {
-      const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]);
-      const key = await crypto.subtle.deriveKey(
-        { name: "PBKDF2", salt: bytes(DATA.salt), iterations: DATA.it, hash: "SHA-256" },
-        base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]
-      );
-      const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: bytes(DATA.iv) }, key, bytes(DATA.ct));
-      document.body.innerHTML = new TextDecoder().decode(plain);
-      // Scripts added via innerHTML don't run, so re-create them.
-      document.body.querySelectorAll("script").forEach((old) => {
-        const fresh = document.createElement("script");
-        [...old.attributes].forEach((a) => fresh.setAttribute(a.name, a.value));
-        fresh.textContent = old.textContent;
-        old.replaceWith(fresh);
-      });
-      const s = document.createElement("script");
-      s.src = "script.js";
-      document.body.appendChild(s);
-      if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
-    }
+  <footer class="site-footer container">
+    <p>© <span id="year">2026</span> Lorenzo Mariotto</p>
+    <p>Designed &amp; built in London</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      btn.disabled = true;
-      error.hidden = true;
-      try {
-        await unlock(input.value);
-        try { sessionStorage.setItem(KEY, input.value); } catch {}
-      } catch {
-        error.hidden = false;
-        input.select();
-        btn.disabled = false;
-      }
-    });
-
-    let saved = null;
-    try { saved = sessionStorage.getItem(KEY); } catch {}
-    if (saved) unlock(saved).catch(() => { try { sessionStorage.removeItem(KEY); } catch {} });
-  })();
-  </script>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button class="lightbox-close" type="button" aria-label="Close">×</button>
+    <img alt="">
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

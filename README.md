@@ -11,11 +11,11 @@ Static portfolio built with plain HTML, CSS and JavaScript. No build step: open 
 
 ## Password-protected case studies
 
-`night-mode.html` and `game-vision.html` are encrypted and only open with the
-password. The readable versions live in `private/` (git-ignored, never
-published). To change a page:
+`game-vision.html` is encrypted and only opens with the password. Its readable
+version lives in `private/` (git-ignored, never published). `night-mode.html` is
+public: edit it directly. To change the locked page:
 
-1. Edit its source in `private/` (`night-mode.src.html` or `game-vision.src.html`).
+1. Edit its source in `private/game-vision.src.html`.
 2. Re-encrypt it (PowerShell):
 
    ```
