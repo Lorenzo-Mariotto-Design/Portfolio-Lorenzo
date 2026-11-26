@@ -121,6 +121,9 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .b-photo .b-cap small { font-size: .74rem; }
 .b-case::after, .b-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,7,6,.92), rgba(8,7,6,0) 45%); }
 .b-cap { position: absolute; z-index: 1; left: 22px; right: 22px; bottom: 20px; }
+/* "Password protected" badge on locked case studies */
+.b-lock { position: absolute; z-index: 1; top: 16px; left: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 11px; border-radius: 99px; background: rgba(14,13,11,.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 0 0 1px rgba(255,255,255,.12) inset; color: var(--ink); font-size: .8rem; font-weight: 500; letter-spacing: .01em; }
+.b-lock svg { width: 15px; height: 15px; fill: none; stroke: var(--accent); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .b-cap small { display: block; color: rgba(255,255,255,.7); font-size: .8rem; margin-bottom: 6px; }
 .b-cap strong { font: 400 clamp(1.7rem, 2.6vw, 2.4rem)/1 var(--serif); transition: color .3s; }
 .b-case:hover .b-cap strong, .b-photo:hover .b-cap strong { color: var(--accent); }
