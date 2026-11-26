@@ -194,8 +194,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .js .logo-group { animation: marquee-scroll 34s linear infinite; }
 .marquee:hover .logo-group { animation-play-state: paused; }
 @keyframes marquee-scroll { to { transform: translateX(calc(-100% - var(--gap))); } }
-.logo { display: flex; align-items: center; justify-content: center; height: 44px; white-space: nowrap; }
-.logo img { display: none; height: 100%; width: auto; max-width: 160px; object-fit: contain; filter: brightness(0) invert(1); opacity: .6; transition: opacity .2s; }
+.logo { display: flex; align-items: center; justify-content: center; height: 52px; white-space: nowrap; }
+.logo img { display: none; height: var(--h, 40px); width: auto; max-width: 180px; object-fit: contain; filter: brightness(0) invert(1); opacity: .6; transition: opacity .2s; }
 .logo-name { font: 500 clamp(1.15rem, 2vw, 1.6rem)/1 var(--sans); letter-spacing: -.03em; color: var(--muted); transition: color .2s; }
 .logo:hover .logo-name { color: var(--ink); }
 .logo.has-img img { display: block; }
