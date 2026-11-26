@@ -131,9 +131,6 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .b-photo .b-cap strong { font-size: clamp(1.5rem, 2.1vw, 2rem); }
 .b-photo .b-cap small { font-size: .74rem; }
 .b-case::after, .b-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,7,6,.92), rgba(8,7,6,0) 45%); }
-.b-tag { position: absolute; z-index: 1; top: 18px; left: 18px; padding: 7px 12px; border-radius: 99px; background: rgba(14,13,11,.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-size: .75rem; letter-spacing: .06em; }
-.b-go { position: absolute; z-index: 1; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: #111; display: grid; place-items: center; transition: transform .4s var(--ease), background .3s; }
-.b-case:hover .b-go, .b-case:focus-visible .b-go, .b-photo:hover .b-go, .b-photo:focus-visible .b-go { transform: rotate(45deg); background: var(--accent); }
 .b-cap { position: absolute; z-index: 1; left: 22px; right: 22px; bottom: 20px; }
 .b-cap small { display: block; color: rgba(255,255,255,.7); font-size: .8rem; margin-bottom: 6px; }
 .b-cap strong { font: 400 clamp(1.7rem, 2.6vw, 2.4rem)/1 var(--serif); transition: color .3s; }
